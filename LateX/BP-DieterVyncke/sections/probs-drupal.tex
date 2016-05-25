@@ -1,0 +1,40 @@
+\label{ch:probleemstelling bij Drupal}
+
+\section{Leercurve}
+Voor nieuwe gebruikers kan het gebruik van Drupal als overrompelend ervaren worden. De vele beschikbare modules die al dan niet overlappend zijn met andere modules, kunnen voor verwarring zorgen. De te uitgebreide functionaliteiten zorgen ervoor dat de essentie verloren gaat. 
+\newline\newline
+Iedere nieuwe gebruiker van Drupal komt in aanraking met de term "Drupalisms", een term die vertaald kan worden als: "Do it the Drupal way". Bij het volgen van de Drupal ontwikkelingsmethoden is het niet voldoende om enkel PHP te kennen. Vele methoden en patronen zijn genest in pagina's van pagina's of andere API documenten. Dit vergt tijd om dit als nieuwe Drupal ontwikkelaar onder knie te krijgen. Drupal heeft een geheel eigen methode van werken \citep{MCDpartners2015DrupalLook}.
+\newline\newline
+Echt goede Drupal ontwikkelaars vinden is geen sinecure. Om Drupal volledig onder de knie te krijgen dien je te rekenen op een paar jaar intensieve training.
+\newline\newline
+Ondanks de vele modules kan het gebeuren dat je een feature wil dat niet kant-en-klaar is aangeleverd. Dan is het aangewezen de feature zelf te ontwikkelen aan de hand van een module. Een leercurve die een pak steiler is dan het onder de knie krijgen van de basis van Drupal. Een grondige kennis van PHP en werking van het de core is hier essentieel.
+
+\section{Backward Compatibility en Updates}
+Bij de start heeft de Drupal Community beslist om  niet compatibel te zijn met eerdere versies. Dit wil zeggen dat nieuwe versies geen ondersteuning bieden aan oudere versies. Reden hiervoor is dat Drupal steeds de laatste technologieën wil ondersteunen en als dusdanig een beter systeem wil afleveren. 
+\newline\newline
+Doordat Drupal geen compatibiliteit met oudere versies ondersteunt, levert dit voor bedrijven die steeds up-to-date willen zijn met de laatste technologieën een extra kost op. Voor ontwikkelaars wil dit zeggen dat ze hun modules moeten herschrijven om volledig compatibel te zijn met de nieuwe versie. 
+\newline\newline
+Om een Drupal site steeds up-to-date te houden en daarbij volledig beveiligd te zijn, dien je zeer frequent, zo niet maandelijks je modules up te daten. Binnen een bepaalde versie levert dit meestal weinig problemen op, dit in tegenstelling met het upgraden naar een nieuwe core versie van Drupal. Deze actie verloopt meestal niet van een leien dakje \citep{Tzu-ChiHuang2015StopFun}.
+
+\section{Zwaar systeem}
+Drupal 7 kan aanzien worden als een zwaar systeem als we dit gaan vergelijken met verschillende andere PHP frameworks. Drupal bezit een grote basiscode met vele functionaliteiten die bijna nooit of uiterst zelden allemaal in één project nodig zullen zijn. Een teveel aan code dat duidelijk voor vertraging zorgt. Drupal 7 maakt gebruik van Hooks, een systeem dat goed werkt om functies automatisch te detecteren en in te laden. Dit systeem komt echter met het nadeel van lagere performantie. Drupal laadt elke geactiveerde Module in bij ieder verzoek, om te zien of er een Hook geïmplementeerd is voor deze bepaalde functie waardoor een piek van activiteiten ontstaat en er performantie verlies optreedt. Dit kan problemen opleveren bij een hosting die niet voldoende RAM ter beschikking stelt. Drupal lost dit op door een overvloed aan caching te voorzien. Hardware op zich is niet duur en daarom niet onoverkomelijk maar het levert een minder efficiënt systeem op.    
+
+\epigraph{"The power comes at a great cost to flexibility, simplicity and efficiency. I like the idea of having just the code that is needed – not an extra line or module."}{\textit{Varun Arora \citet{aroraVarun2013WhyPlatform}}}
+
+
+\section{Database afhankelijk}
+Drupal 7 is een database georiënteerd systeem. Bij een bestand georiënteerd systeem is de volledige structuur en opbouw in code is terug te vinden. Drupal slaat de structuur van zijn modellen (Content types) en opbouw van pagina's op in de database. Dit resulteert in een grote afhankelijkheid van de database. Voor statische pagina's die in een ander PHP framework geen database verzoek vergen, is dit bij Drupal 7 wel het geval.  
+\newline\newline
+Drupal genereert zeer veel query's, zelfs om de meest eenvoudige data op te halen. Daarnaast heb je ook geen enkel idee welke query's je aanvraagt op je database. Het spreekt voor zich dat de database heel groot kan worden, te groot zelf. Bij complexe structuren waarbij je normaal een 30-tal tabellen nodig hebt, maakt Drupal hiervan het tienvoudige. Drupal gebruikt aparte table joins waarbij er een immens netwerk aan relaties ontstaat tussen tabellen. De tabel is te sterk genormaliseerd om de gewenste flexibiliteit te verkrijgen.
+
+\section{Beheersbaarheid}
+Met beheersbaarheid bedoelen we dat Drupal niet 'Developer Oriented' is. Het systeem is niet ontwikkeld om te voldoen aan de wensen web ontwikkelaars maar is dat eerder aan de wensen van eindgebruikers die zelf de sites in elkaar kunnen puzzelen zonder een lijn code te schrijven. Het opbouwen van pagina's, model types en het beheren van items gebeurt allemaal via de back-end van de browser en dus niet via beheersbare code die eenvoudig te debuggen is. Daarnaast bestaan er geen stukken code die later opnieuw van dienst kunnen zijn voor andere projecten. Voor ieder project dienen alle configuratie instellingen opnieuw te worden aangemaakt.
+\newline\newline
+De code die omgezet wordt naar HTML is allesbehalve proper te noemen. Er bestaat een teveel aan overbodige div-tags. Klassen zijn veelal weinigzeggend en moeilijk overzichtelijk te stijlen via CSS.
+
+\section{Modules}
+Voor elk probleem in Drupal is er waarschijnlijk wel reeds een module gemaakt. Nochtans zijn veel van deze modules geen oplossing voor het daadwerkelijke probleem. Naast de vele afgewerkte en goed werkende modules, zit de module bibliotheek van Drupal vol met slecht werkende en gedateerde modules. Dit komt omdat Drupal open source software is waar iedereen vrij is zijn inbreng te leveren. Slecht werkende modules bevatten ernstige bugs waardoor de werking faalt. Gedateerde modules ontstaan omdate Drupal geen comptabiliteit met vorige versies ondersteunt.
+\newline\newline
+Modules waar een sterk team achter staat dat bug reporting opvolgt en de module in stand houdt, zijn veelal goede en betrouwbare modules. Het is aan de gebruiker na te gaan of de module al dan niet bruikbaar is en een oplossing voor het probleem kan zijn. Een goede referentie is Github.
+\newline\newline\newline
+We proberen een antwoord te vinden op elk van deze aangehaalde pijnpunten in het stuk "Vergelijkende testen en resultaat". We bekijken hierin de resultaten alsook gaan we na of er een alternatief systeem bestaat dat deze pijnpunten volledig of deels kan wegwerken.
