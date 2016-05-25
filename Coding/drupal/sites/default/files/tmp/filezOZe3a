@@ -1,0 +1,8 @@
+a.menu-534, ul.links li.menu-534 a {
+  background-image: url(/sites/default/files/styles/logo/public/menu_icons/menu_icon_417.png);
+  padding-left:176px;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 130px;
+}
+

@@ -1,0 +1,121 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* HTML element (SMACSS base) rules */
+@import "normalize.css";
+
+/* Layout rules */
+@import "layouts/responsive.css";
+
+/* Component (SMACSS module) rules */
+@import "components/misc.css";
+/* Optionally, add your own components here. */
+@import "print.css";
+
+/* SMACSS theme rules */
+/* @import "theme-A.css"; */
+/* @import "theme-B.css"; */
+
+#page{
+    width: 1024px;
+    margin: 0 auto; 
+
+}
+
+html, body{
+
+    /*background gradient*/
+    /*background-color: #d7d6c9;*/
+    background: #d6d6c9;
+    background: -moz-linear-gradient(left,  #d6d6c9 0%, #e3e3d9 50%, #d6d6c9 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d6d6c9), color-stop(50%,#e3e3d9), color-stop(100%,#d6d6c9));
+    background: -webkit-linear-gradient(left,  #d6d6c9 0%,#e3e3d9 50%,#d6d6c9 100%);
+    background: -o-linear-gradient(left,  #d6d6c9 0%,#e3e3d9 50%,#d6d6c9 100%);
+    background: -ms-linear-gradient(left,  #d6d6c9 0%,#e3e3d9 50%,#d6d6c9 100%);
+    background: linear-gradient(to right,  #d6d6c9 0%,#e3e3d9 50%,#d6d6c9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6c9', endColorstr='#d6d6c9',GradientType=1 );
+
+
+    height: 100%;
+    margin: 0;
+    font-family: eurostile_extended_2regular;
+}
+
+/*-----------------------------------------------*/
+/*                      NAVIGATION               */
+/*-----------------------------------------------*/
+
+#header{
+    height: 130px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-top: 50px;
+}
+
+#navigation{
+    width: 100%;
+    height: 100%;
+}
+
+.links{
+    width: 100%;
+    height: 130px;
+    display: table;
+}
+
+.links li{
+    display: table-cell;
+    height: 87px;
+    width: 20%;  /* (100 / numItems)% */
+    line-height: 130px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0;
+}
+
+
+
+.menu-417 a{
+    display: block !important;
+    color: transparent !important;
+    line-height: 0; 
+    font-size: 0   !important;
+    margin-left: 15px;
+}
+
+.links li a{
+    color: #18234a;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*override*/
+#navigation .links li, #navigation .menu li{
+    padding: 0;
+}
+
+
+/*-----------------------------------------------*/
+/*                      Banner                   */
+/*-----------------------------------------------*/
+
+.group-right{
+    font-family: DaxOT-Light;
+    font-size: 9px;
+    line-height: 12px;
+}
+
+h2{
+    font-size: 40px;
+    font-family: eurostile_extended_2regular;
+    margin: 0;
+     text-transform: uppercase;
+     line-height: 40px;
+}
