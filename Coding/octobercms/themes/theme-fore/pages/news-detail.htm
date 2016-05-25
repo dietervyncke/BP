@@ -1,0 +1,21 @@
+title = "News detail"
+url = "/news-detail/:slug"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Dieter\News\Models\NewsItem"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

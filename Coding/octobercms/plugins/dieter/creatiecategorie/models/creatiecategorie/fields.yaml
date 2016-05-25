@@ -1,0 +1,36 @@
+fields:
+    title:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.slug'
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    short_description:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.short_description'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    body:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.body'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    cover_image:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.cover_image'
+        span: auto
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload

@@ -1,0 +1,10 @@
+columns:
+    name:
+        label: 'dieter.teammembers::lang.teammember.name'
+        type: text
+    job:
+        label: 'dieter.teammembers::lang.teammember.job'
+        type: text
+    hiredate:
+        label: 'dieter.teammembers::lang.teammember.hiredate'
+        type: date

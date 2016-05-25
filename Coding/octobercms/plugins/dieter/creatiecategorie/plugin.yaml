@@ -1,0 +1,16 @@
+plugin:
+    name: 'dieter.creatiecategorie::lang.plugin.name'
+    description: 'dieter.creatiecategorie::lang.plugin.description'
+    author: Dieter
+    icon: oc-icon-cog
+    homepage: ''
+navigation:
+    creatie-categorie:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.creatie_categorie'
+        url: dieter/creatiecategorie/creatiecategorie
+        icon: icon-cog
+        sideMenu:
+            realisatie:
+                label: 'dieter.creatiecategorie::lang.realisatie.realisatie'
+                url: dieter/creatiecategorie/realisatie
+                icon: icon-thumbs-up

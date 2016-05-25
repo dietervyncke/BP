@@ -1,0 +1,147 @@
+title = "Fore"
+url = "/"
+layout = "default"
+==
+
+function onStart()
+{
+	$this['first_newsItem'] = Db::table('dieter_news_newsitem')->first();
+	$this['newsItems'] = Db::table('dieter_news_newsitem')->skip(1)->take(2)->get();
+}
+
+==
+
+<!-- {% partial "header-banner" banner_image="themes/theme-fore/assets/images/banner-images/banner-image-01.jpg" content=foo %} -->
+<figure class="banner-image-wrapper">
+	<div class="image">
+		<img src="themes/theme-fore/assets/images/banner-images/banner-image-01.jpg" alt="" />
+	</div>
+	<figcaption class="banner-image">
+		<div class="container">
+			<div class="desc">
+				{% content 'welcome.htm' %}
+			</div>
+		</div>
+	</figcaption>
+</figure>
+
+<!-- <div class="container"> -->
+	<div class="row grid-home">
+		<div class="one-third">
+			<div class="h130 home-project-bg" style="background-image: url('themes/theme-fore/assets/images/projects/mederwerker1.jpg')">
+				<img src="themes/theme-fore/assets/images/projects/mederwerker1.jpg" alt="" />
+			</div>
+			<div class="h130 nb-wrapper">
+				<div class="va-wrap">
+					<div class="va-m">
+						<p class="mb10">
+							Scrhijf je voor de driemaandelijkse nieuwsbrief
+						</p>
+						<form class="skewed" action="index.html" method="post">
+							<input type="email" name="cm-hldloh-hldloh" id="fieldEmail" class="email">
+							<input type="submit" id="submit" value="Inschrijven" class="submit">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="h260 home-project-bg" style="background-image: url('themes/theme-fore/assets/images/projects/mederwerker1.jpg')">
+				<img src="themes/theme-fore/assets/images/projects/mederwerker1.jpg" alt="" />
+			</div>
+		</div>
+
+
+		<div class="one-third">
+			<div class="h130 news-item-wrapper">
+				<div class="news-item">
+					<div class="va-wrap">
+						<div class="va-m">
+							<h6 class="date">{{ first_newsItem.updated_at|date('d.m.Y')  }}</h6>
+							<p class="desc">
+								{{ first_newsItem.short_description }}
+							</p>
+							<!-- <p class="more">
+								<a class="tdn" href="{{ 'news-detail'|page({ slug: first_newsItem.slug }) }}">Lees meer</a>
+							</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="h130 title-wrap">
+				<div class="va-wrap">
+					<div class="va-m">
+						<h2>Laatste<br/>Nieuws</h2>
+					</div>
+				</div>
+			</div>
+			{% for newsItem in newsItems %}
+			<div class="h130 news-item-wrapper">
+				<div class="news-item">
+					<div class="va-wrap">
+						<div class="va-m">
+							<h6 class="date">{{ newsItem.updated_at|date('d.m.Y')  }}</h6>
+							<p class="desc">
+								{{ newsItem.short_description }}
+							</p>
+							<!-- <p class="more">
+								<a class="tdn" href="{{ 'news-detail'|page({ slug: newsItem.slug }) }}">Lees meer</a>
+							</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			{%endfor %}
+		</div>
+		<div class="one-third">
+			<div class="row">
+				<div class="one-half">
+					<div class="h260 home-project-bg" style="background-image: url('themes/theme-fore/assets/images/projects/tony.png')">
+						<img src="themes/theme-fore/assets/images/projects/tony.png" alt="" />
+					</div>
+				</div>
+				<div class="one-half">
+					<div class="h260 home-about">
+						{% content 'welkomst-block-homepagina.htm' %}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="one-half">
+					<div class="h260 home-contact">
+						<div class="va-wrap">
+							<div class="va-b">
+								<p>
+									<strong>Foré nv /</strong> <br>
+									Ringlaan 11 / 9900 Eeklo / <br>
+									België /
+								</p>
+								<p>
+									T +32 (0)9 377 77 77 / <br>
+									F +32 (0)9 378 77 77 /
+								</p>
+								<p>
+									E <a class="tdn" href="mailto:info@fore.be">info@fore.be</a> /
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="one-half">
+					<div class="home-project-bg h260 home-social" style="background-image: url('themes/theme-fore/assets/images/projects/huisarts04.jpg')">
+						<!-- <div class="va-wrap">
+						<div class="va-b">
+						<p>
+						Volg Foré ook via de volgende media.
+					</p>
+					<a href="#">FB</a>
+					<a href="#">Twitter</a>
+					<a href="#">Instagram</a>
+					<a href="#">Linkedin</a>
+				</div>
+			</div> -->
+						<img src="themes/theme-fore/assets/images/projects/huisarts04.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+</div>

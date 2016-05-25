@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table dieter_news_newsitem'
+    - builder_table_create_dieter_news_newsitem.php
+1.0.3:
+    - 'Updated table dieter_news_newsitem'
+    - builder_table_update_dieter_news_newsitem.php
+1.0.4:
+    - 'Updated table dieter_news_newsitem'
+    - builder_table_update_dieter_news_newsitem_2.php

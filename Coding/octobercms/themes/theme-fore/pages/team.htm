@@ -1,0 +1,50 @@
+title = "Team"
+url = "/team"
+layout = "default"
+is_hidden = 0
+==
+function onStart()
+{
+	$this['members'] = Db::table('dieter_teammembers_teammembers')->get();
+}
+==
+<figure class="banner-image-wrapper">
+	<div class="image">
+		<img src="themes/theme-fore/assets/images/banner-images/banner-image-01.jpg" alt="" />
+	</div>
+	<figcaption class="banner-image">
+		<div class="container">
+			<div class="desc">
+				{% content 'team.htm' %}
+			</div>
+		</div>
+	</figcaption>
+</figure>
+
+<div class="team">
+	<div class="row g0">
+		{% for member in members %}
+		<div class="one-third">
+			<div class="image-bg member" style="background-image: url('{{ member.imageurl|media }}');">
+				<img src="{{ member.imageurl|media }}" title="{{ member.imageurl.title }}" alt="{{ member.imageurl.description }}"/>
+				<div class="overlay-wrapper">
+					<div class="desc">
+						{% if member.hiredate != '0000-00-00' %}
+						<p class="bold">
+							{{ member.name }}
+						</p>
+						<p>
+							{{ member.job }} - bij Foré sinds <span class="bold">{{ member.hiredate|date('Y') }}</span>
+						</p>
+						{% else %}
+						<p>
+							<span class="bold">{{ member.name }}</span> - {{ member.job }}
+						</p>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>

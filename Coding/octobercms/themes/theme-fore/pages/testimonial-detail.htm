@@ -1,0 +1,33 @@
+title = "Detail testimonial"
+url = "/testimonials/:slug"
+layout = "default"
+==
+use dieter\testimonals\models\Testimonial;
+
+function onStart()
+{
+	$slug = $this->param('slug');
+	$this['testimonial'] = Testimonial::where('slug', $slug)->first();
+}
+==
+
+<div class="container">
+	<div class="row g80 detail testimonial-detail">
+		<div class="one-half">
+			<h3>{{ testimonial.name }}</h3>
+			<p>
+				{{ testimonial.full_description }}
+			</p>
+		</div>
+		<div class="one-half">
+			<div class="image-bg" style="background-image: url('{{  testimonial.person_image_url|media }}');">
+				<img src="{{ testimonial.person_image_url|media }}" title="{{ testimonial.person_image_url.title }}" alt="{{ testimonial.person_image_url.description }}"/>
+			</div>
+		</div>
+	</div>
+	<div class="isotope">
+		{% for image in testimonial.project_image_url %}
+			<img src="{{ image.thumb(300,300,{'mode':'crop'}) }}" />
+		{% endfor %}
+	</div>
+</div>

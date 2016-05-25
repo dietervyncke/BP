@@ -1,0 +1,26 @@
+fields:
+    title:
+        label: 'dieter.news::lang.newsItem.title'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: 'dieter.news::lang.newsItem.slug'
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    short_description:
+        label: 'dieter.news::lang.newsItem.short_description'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    body:
+        label: 'dieter.news::lang.newsItem.Body'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor

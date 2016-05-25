@@ -1,0 +1,10 @@
+name: Testimonials
+form: $/dieter/testimonals/models/testimonial/fields.yaml
+modelClass: Dieter\Testimonals\Models\Testimonial
+defaultRedirect: dieter/testimonals/testimonials
+create:
+    redirect: 'dieter/testimonals/testimonials/update/:id'
+    redirectClose: dieter/testimonals/testimonials
+update:
+    redirect: dieter/testimonals/testimonials
+    redirectClose: dieter/testimonals/testimonials

@@ -1,0 +1,22 @@
+fields:
+    name:
+        label: 'dieter.teammembers::lang.teammember.name'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    job:
+        label: 'dieter.teammembers::lang.teammember.job'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    hiredate:
+        label: 'dieter.teammembers::lang.teammember.hiredate'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        type: datepicker
+    imageurl:
+        label: 'dieter.teammembers::lang.teammember.image_url'
+        mode: image
+        span: left
+        type: mediafinder

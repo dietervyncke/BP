@@ -1,0 +1,9 @@
+columns:
+    title:
+        label: 'dieter.news::lang.newsItem.title'
+        type: text
+        searchable: true
+        sortable: true
+    short_description:
+        label: 'dieter.news::lang.newsItem.short_description'
+        type: text

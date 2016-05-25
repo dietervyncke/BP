@@ -1,0 +1,8 @@
+columns:
+    name:
+        label: 'dieter.testimonals::lang.plugin.name'
+        type: text
+        searchable: true
+    short_description:
+        label: 'dieter.testimonals::lang.testimonial.shortdescription'
+        type: text

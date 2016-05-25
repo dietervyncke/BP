@@ -1,0 +1,11 @@
+plugin:
+    name: Testimonials
+    description: 'dieter.testimonials::lang.plugin.description'
+    author: Dieter
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    testimonial:
+        label: 'dieter.testimonals::lang.testimonial.testimonial'
+        url: dieter/testimonals/testimonials
+        icon: icon-check

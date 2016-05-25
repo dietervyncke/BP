@@ -1,0 +1,9 @@
+columns:
+    title:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.title'
+        type: text
+        searchable: true
+        sortable: true
+    short_description:
+        label: 'dieter.creatiecategorie::lang.creatiecategorie.short_description'
+        type: text

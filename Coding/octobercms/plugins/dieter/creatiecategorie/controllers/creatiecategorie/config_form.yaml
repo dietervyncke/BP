@@ -1,0 +1,10 @@
+name: CreatieCategorie
+form: $/dieter/creatiecategorie/models/creatiecategorie/fields.yaml
+modelClass: Dieter\CreatieCategorie\Models\CreatieCategorie
+defaultRedirect: dieter/creatiecategorie/creatiecategorie
+create:
+    redirect: 'dieter/creatiecategorie/creatiecategorie/update/:id'
+    redirectClose: dieter/creatiecategorie/creatiecategorie
+update:
+    redirect: dieter/creatiecategorie/creatiecategorie
+    redirectClose: dieter/creatiecategorie/creatiecategorie

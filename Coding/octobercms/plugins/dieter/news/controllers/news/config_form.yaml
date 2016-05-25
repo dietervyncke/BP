@@ -1,0 +1,10 @@
+name: News
+modelClass: Dieter\News\Models\NewsItem
+form: $/dieter/news/models/newsitem/fields.yaml
+defaultRedirect: dieter/news/news
+create:
+    redirect: 'dieter/news/news/update/:id'
+    redirectClose: dieter/news/news
+update:
+    redirect: dieter/news/news
+    redirectClose: dieter/news/news

@@ -1,0 +1,35 @@
+fields:
+    title:
+        label: 'dieter.creatiecategorie::lang.realisatie.title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: 'dieter.creatiecategorie::lang.realisatie.slug'
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    body:
+        label: 'dieter.creatiecategorie::lang.realisatie.body'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    realisation_images:
+        label: 'dieter.creatiecategorie::lang.realisatie.realisation-images'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    categorie:
+        label: Dropdown
+        oc.commentPosition: ''
+        span: auto
+        type: dropdown

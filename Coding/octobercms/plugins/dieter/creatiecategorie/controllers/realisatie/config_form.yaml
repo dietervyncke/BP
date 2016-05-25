@@ -1,0 +1,10 @@
+name: Realisatie
+form: $/dieter/creatiecategorie/models/realisatie/fields.yaml
+modelClass: Dieter\CreatieCategorie\Models\Realisatie
+defaultRedirect: dieter/creatiecategorie/realisatie
+create:
+    redirect: 'dieter/creatiecategorie/realisatie/update/:id'
+    redirectClose: dieter/creatiecategorie/realisatie
+update:
+    redirect: dieter/creatiecategorie/realisatie
+    redirectClose: dieter/creatiecategorie/realisatie

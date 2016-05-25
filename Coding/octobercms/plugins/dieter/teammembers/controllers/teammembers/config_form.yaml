@@ -1,0 +1,11 @@
+name: Teammembers
+modelClass: Dieter\Teammembers\Models\Teammember
+form: $/dieter/teammembers/models/teammember/fields.yaml
+defaultRedirect: dieter/teammembers/teammembers
+create:
+    redirect: 'dieter/teammembers/teammembers/update/:id'
+    redirectClose: dieter/teammembers/teammembers
+update:
+    redirect: dieter/teammembers/teammembers
+    redirectClose: dieter/teammembers/teammembers
+preview: {  }

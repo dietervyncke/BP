@@ -1,0 +1,41 @@
+fields:
+    name:
+        label: 'dieter.testimonals::lang.testimonial.name'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: 'dieter.testimonals::lang.testimonial.slug'
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    short_description:
+        label: 'dieter.testimonals::lang.testimonial.shortdescription'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    full_description:
+        label: 'dieter.testimonals::lang.testimonial.fulldescription'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    person_image_url:
+        label: 'dieter.testimonals::lang.testimonial.personimageurl'
+        oc.commentPosition: ''
+        mode: image
+        span: auto
+        type: mediafinder
+    project_image_url:
+        label: 'dieter.testimonals::lang.testimonial.projectimageurl'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

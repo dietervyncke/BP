@@ -1,0 +1,11 @@
+plugin:
+    name: 'dieter.teammembers::lang.plugin.name'
+    description: 'dieter.teammembers::lang.plugin.description'
+    author: Dieter
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    teammembers:
+        label: 'dieter.teammembers::lang.plugin.name'
+        url: dieter/teammembers/teammembers
+        icon: icon-male

@@ -1,0 +1,29 @@
+title = "Realisatie detail"
+url = "/categorie/:slug"
+layout = "default"
+==
+use dieter\creatiecategorie\models\Realisatie;
+
+function onStart()
+{
+	$slug = $this->param('slug');
+	$this['realisatie'] = Realisatie::where('slug', $slug)->first();
+}
+==
+
+<div class="container">
+	<div class="row g80">
+		<div class="one-third">
+			<h3>{{ realisatie.title }}</h3>
+				{{ realisatie.body|raw }}
+		</div>
+		<div class="two-third">
+			<div class="isotope">
+				{% for image in realisatie.realisation_images %}
+					<img src="{{ image.thumb(313,{'mode':'crop'}) }}" />
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+</div>

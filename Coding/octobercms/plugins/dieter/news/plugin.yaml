@@ -1,0 +1,11 @@
+plugin:
+    name: 'dieter.news::lang.plugin.name'
+    description: 'dieter.news::lang.plugin.description'
+    author: Fore
+    icon: oc-icon-bullhorn
+    homepage: ''
+navigation:
+    news:
+        label: News
+        url: dieter/news/news
+        icon: icon-bullhorn

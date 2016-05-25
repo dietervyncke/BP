@@ -1,0 +1,181 @@
+// Font Stacks
+#font {
+	.default(@size: 16, @weight: 400, @lineHeight: 1.5em) {
+	    font-family: 'DaxOT-Light', Helvetica, Arial, Verdana, sans-serif;
+	    .fs(@size);
+	    line-height: @lineHeight;
+	    font-weight: @weight;
+	}
+}
+
+
+/* Typography.less
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+
+
+/* BODY */
+
+p {
+	line-height: 1.5em; margin-bottom: 1.5em;
+	&.large { .fs(16); }
+}
+
+strong { font-weight: 500; font-size: inherit; }
+
+em { font-style: italic; font-weight: inherit; }
+
+a {
+	color: @linkColor; text-decoration: underline; .transition(0.2s);
+	font-weight: inherit; font-style: inherit;
+	&:hover, &:focus { color: @linkColorHover; }
+	&:focus, &:active { outline: 0; }
+
+	&.tdn { text-decoration: none;
+		&:hover, &:focus { text-decoration: underline; }
+	}
+}
+
+a[href^=tel]{
+    text-decoration:none;
+    &:hover, &:focus { text-decoration: underline; }
+}
+
+a:not([href]) {
+	color: @black; text-decoration: none;
+	&:hover, &:focus {  }
+}
+
+img {
+	max-width: 100%; height: auto; display: inline-block; vertical-align: middle;
+}
+
+
+
+/* HEADINGS */
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	.optimize-font; color: @accent; line-height: 1.2em; margin: 0 0 0.8em;
+	a {
+		text-decoration: none; outline: 0; font-weight: inherit;
+		color: @accent;
+		&:hover, &:focus { color: @accentHover; }
+	}
+}
+
+h1, .h1 {
+	.fs(24);
+
+	@media @tablet { .fs(35); }
+}
+
+h2, .h2 {
+	.fs(18);
+
+	@media @tablet { .fs(24); }
+}
+
+h3, .h3 {
+	.fs(16);
+
+	@media @tablet { .fs(40); .lh(42); color: @blueDark; position: relative; }
+}
+
+h4, .h4 {
+	@media @tablet { .fs(16); }
+}
+
+h5, .h5 {  }
+
+h6, .h6 {  }
+
+
+/* LISTS */
+ul, ol {
+	margin: 0 0 1.5em 16px;
+	li { line-height: 1.5em; padding: 0; }
+}
+
+ul ul, ul ol, ol ol, ol ul {
+	margin-bottom: 0;
+}
+
+ul {
+	list-style: disc;
+	ul { list-style: circle; }
+
+	&.social {
+		.unstyled; .clearfix;
+		li { float: left; }
+	}
+
+	&.social {
+		margin: 20px 0 20px -5px;
+		li { margin: 0 0 5px 5px; }
+		a {
+			height: 40px; width: 40px; line-height: 40px; display: block; .border-radius(35px); background: @accent;
+			text-decoration: none; text-align: center; overflow: hidden;
+		}
+
+		.twitter {
+			background: #2DAAE1;
+			&:hover, &:focus {
+				background: darken(#2DAAE1, 8%);
+			}
+		}
+		.facebook {
+			background: #3C5B9B;
+			&:hover, &:focus {
+				background: darken(#3C5B9B, 8%);
+			}
+		}
+		.pinterest {
+			background: #CB2027;
+			&:hover, &:focus {
+				background: darken(#CB2027, 8%);
+			}
+		}
+		.linkedin {
+			background: #0173B2;
+			&:hover, &:focus {
+				background: darken(#0173B2, 8%);
+			}
+		}
+	}
+
+	&.lined {
+		.unstyled;
+		li { border-bottom: 1px solid #E3E3E3; padding: 5px 0;
+			&:first-child { padding-top: 0; }
+			&:last-child { padding-bottom: 0; border-bottom: none; }
+		}
+	}
+}
+
+
+
+ol {
+	list-style: decimal;
+}
+
+.unstyled, nav ul {
+	margin: 0; padding: 0; list-style: none;
+	ul { list-style: none; }
+	li { list-style: none; list-style-image: none; padding: 0; background: none; }
+}
+nav ul { .clearfix; }
+
+dl {
+	margin: 0 0 40px;
+	dt, dd { }
+}
+
+
+
+/* MISC */
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid @accent; margin: 70px 0 40px; }
+
+blockquote {
+	line-height: inherit;
+}

@@ -1,0 +1,11 @@
+title: News
+modelClass: Dieter\News\Models\NewsItem
+list: $/dieter/news/models/newsitem/columns.yaml
+recordUrl: 'dieter/news/news/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

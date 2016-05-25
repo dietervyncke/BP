@@ -1,0 +1,62 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ this.page.title }}</title>
+	<meta name="description" content="{{ this.page.meta_description }}">
+	<meta name="title" content="{{ this.page.meta_title }}">
+	<meta name="author" content="OctoberCMS">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content="OctoberCMS">
+	<!-- <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}" /> -->
+	{% styles %}
+	<link href="{{ [
+		'assets/css/style.css'
+		]|theme }}" rel="stylesheet">
+	</head>
+	<body>
+		<div class="page-wrap">
+
+			<!-- Header -->
+			<header class="page-header">
+				<!-- <div class="container"> -->
+					<!-- Nav -->
+					<nav class="main-nav" role="navigation">
+						<span class="trigger"><i class="icon-hamburger" aria-hidden="true"></i><span>Menu</span></span>
+						<ul class="nav-wrap">
+							<li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">/ Home /</a></li>
+							<li class="{% if this.page.id == 'projects' %}active{% endif %}"><a href="{{ 'creaties'|page }}">/ Creaties /</a></li>
+							<li><a href="{{ 'home'|page }}"><img class="logo" src="{{ 'assets/images/logo.png'|theme }}" alt="Logo" /></a></li>
+							<li class="{% if this.page.id == 'team' %}active{% endif %}"><a href="{{ 'team'|page }}">/ Team /</a></li>
+							<li class="{% if this.page.id == 'testimonials' %}active{% endif %}"><a href="{{ 'testimonials'|page }}">/ Getuigenissen /</a></li>
+						</ul>
+					</nav>
+				<!-- </div> -->
+
+			</header>
+
+			<!-- Content -->
+			<section class="main">
+				{% page %}
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer class="page-footer">
+				{% partial "footer" %}
+		</footer>
+
+		<!-- Scripts -->
+		<script src="{{ [
+			'assets/javascript/jquery.js',
+			'assets/javascript/plugin.js',
+			'assets/javascript/app.js',
+		]|theme }}"></script>
+		{% framework extras %}
+		{% scripts %}
+
+	</body>
+	</html>

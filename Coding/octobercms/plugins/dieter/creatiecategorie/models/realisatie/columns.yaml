@@ -1,0 +1,5 @@
+columns:
+    title:
+        label: 'dieter.creatiecategorie::lang.realisatie.title'
+        type: text
+        searchable: true
