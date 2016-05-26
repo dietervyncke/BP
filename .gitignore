@@ -20,6 +20,7 @@ Coding/octobercms/composer.lock
 Coding/octobercms/storage/cms/cache
 Coding/octobercms/storage/cms/twig
 Coding/octobercms/storage/framework/cache/
+Coding/octobercms/storage/framework/sessions/
 
 Drupal
 
@@ -29,4 +30,3 @@ Coding/drupal/sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 Coding/drupal/sites/*/files
 Coding/drupal/sites/*/private
-
