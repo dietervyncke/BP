@@ -18,7 +18,7 @@ php-errors.log
 sftp-config.json
 selenium.php
 composer.lock
-/storage/cms/cache/
-/storage/cms/twig/
-/storage/framework/cache/
-/storage/framework/sessions/
+/storage/cms/cache
+/storage/cms/twig
+/storage/framework/cache
+/storage/framework/sessions
