@@ -1,1 +1,32 @@
-Coding/
+OctoberCMS
+
+Coding/octobercms/bootstrap/compiled.php
+Coding/octobercms/vendor
+Coding/octobercms/composer.phar
+Coding/octobercms/.DS_Store
+Coding/octobercms/.idea
+Coding/octobercms/.env
+Coding/octobercms/.env.*.php
+Coding/octobercms/.env.php
+Coding/octobercms/php_errors.log
+Coding/octobercms/nginx-error.log
+Coding/octobercms/nginx-access.log
+Coding/octobercms/nginx-ssl.access.log
+Coding/octobercms/nginx-ssl.error.log
+Coding/octobercms/php-errors.log
+Coding/octobercms/sftp-config.json
+Coding/octobercms/selenium.php
+Coding/octobercms/composer.lock
+Coding/octobercms/storage/cms/cache
+Coding/octobercms/storage/cms/twig
+Coding/octobercms/storage/framework/cache
+
+Drupal
+
+# Ignore configuration files that may contain sensitive information.
+Coding/drupal/sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+Coding/drupal/sites/*/files
+Coding/drupal/sites/*/private
+
