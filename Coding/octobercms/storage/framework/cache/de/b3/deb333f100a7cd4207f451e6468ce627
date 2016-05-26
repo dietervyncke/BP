@@ -1,0 +1,122 @@
+1464270433s:4275:"a:6:{s:5:"mtime";i:1464029760;s:7:"content";s:2058:"description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ this.page.title }}</title>
+	<meta name="description" content="{{ this.page.meta_description }}">
+	<meta name="title" content="{{ this.page.meta_title }}">
+	<meta name="author" content="OctoberCMS">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content="OctoberCMS">
+	<!-- <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}" /> -->
+	{% styles %}
+	<link href="{{ [
+		'assets/css/style.css'
+		]|theme }}" rel="stylesheet">
+	</head>
+	<body>
+		<div class="page-wrap">
+
+			<!-- Header -->
+			<header class="page-header">
+				<!-- <div class="container"> -->
+					<!-- Nav -->
+					<nav class="main-nav" role="navigation">
+						<span class="trigger"><i class="icon-hamburger" aria-hidden="true"></i><span>Menu</span></span>
+						<ul class="nav-wrap">
+							<li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">/ Home /</a></li>
+							<li class="{% if this.page.id == 'projects' %}active{% endif %}"><a href="{{ 'creaties'|page }}">/ Creaties /</a></li>
+							<li><a href="{{ 'home'|page }}"><img class="logo" src="{{ 'assets/images/logo.png'|theme }}" alt="Logo" /></a></li>
+							<li class="{% if this.page.id == 'team' %}active{% endif %}"><a href="{{ 'team'|page }}">/ Team /</a></li>
+							<li class="{% if this.page.id == 'testimonials' %}active{% endif %}"><a href="{{ 'testimonials'|page }}">/ Getuigenissen /</a></li>
+						</ul>
+					</nav>
+				<!-- </div> -->
+
+			</header>
+
+			<!-- Content -->
+			<section class="main">
+				{% page %}
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer class="page-footer">
+				{% partial "footer" %}
+		</footer>
+
+		<!-- Scripts -->
+		<script src="{{ [
+			'assets/javascript/jquery.js',
+			'assets/javascript/plugin.js',
+			'assets/javascript/app.js',
+		]|theme }}"></script>
+		{% framework extras %}
+		{% scripts %}
+
+	</body>
+	</html>
+";s:7:"viewBag";a:0:{}s:8:"settings";a:2:{s:11:"description";s:14:"Default layout";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2020:"<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{ this.page.title }}</title>
+	<meta name="description" content="{{ this.page.meta_description }}">
+	<meta name="title" content="{{ this.page.meta_title }}">
+	<meta name="author" content="OctoberCMS">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content="OctoberCMS">
+	<!-- <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}" /> -->
+	{% styles %}
+	<link href="{{ [
+		'assets/css/style.css'
+		]|theme }}" rel="stylesheet">
+	</head>
+	<body>
+		<div class="page-wrap">
+
+			<!-- Header -->
+			<header class="page-header">
+				<!-- <div class="container"> -->
+					<!-- Nav -->
+					<nav class="main-nav" role="navigation">
+						<span class="trigger"><i class="icon-hamburger" aria-hidden="true"></i><span>Menu</span></span>
+						<ul class="nav-wrap">
+							<li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">/ Home /</a></li>
+							<li class="{% if this.page.id == 'projects' %}active{% endif %}"><a href="{{ 'creaties'|page }}">/ Creaties /</a></li>
+							<li><a href="{{ 'home'|page }}"><img class="logo" src="{{ 'assets/images/logo.png'|theme }}" alt="Logo" /></a></li>
+							<li class="{% if this.page.id == 'team' %}active{% endif %}"><a href="{{ 'team'|page }}">/ Team /</a></li>
+							<li class="{% if this.page.id == 'testimonials' %}active{% endif %}"><a href="{{ 'testimonials'|page }}">/ Getuigenissen /</a></li>
+						</ul>
+					</nav>
+				<!-- </div> -->
+
+			</header>
+
+			<!-- Content -->
+			<section class="main">
+				{% page %}
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer class="page-footer">
+				{% partial "footer" %}
+		</footer>
+
+		<!-- Scripts -->
+		<script src="{{ [
+			'assets/javascript/jquery.js',
+			'assets/javascript/plugin.js',
+			'assets/javascript/app.js',
+		]|theme }}"></script>
+		{% framework extras %}
+		{% scripts %}
+
+	</body>
+	</html>";}";

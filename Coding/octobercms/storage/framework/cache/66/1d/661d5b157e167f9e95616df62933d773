@@ -1,0 +1,59 @@
+1464270433s:2082:"a:6:{s:5:"mtime";i:1464165376;s:7:"content";s:956:"title = "Detail testimonial"
+url = "/testimonials/:slug"
+layout = "default"
+==
+use dieter\testimonals\models\Testimonial;
+
+function onStart()
+{
+	$slug = $this->param('slug');
+	$this['testimonial'] = Testimonial::where('slug', $slug)->first();
+}
+==
+
+<div class="container">
+	<div class="row g80 detail testimonial-detail">
+		<div class="one-half">
+			<h3>{{ testimonial.name }}</h3>
+			<p>
+				{{ testimonial.full_description }}
+			</p>
+		</div>
+		<div class="one-half">
+			<div class="image-bg" style="background-image: url('{{  testimonial.person_image_url|media }}');">
+				<img src="{{ testimonial.person_image_url|media }}" title="{{ testimonial.person_image_url.title }}" alt="{{ testimonial.person_image_url.description }}"/>
+			</div>
+		</div>
+	</div>
+	<div class="isotope">
+		{% for image in testimonial.project_image_url %}
+			<img src="{{ image.thumb(300,300,{'mode':'crop'}) }}" />
+		{% endfor %}
+	</div>
+</div>
+";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:18:"Detail testimonial";s:3:"url";s:19:"/testimonials/:slug";s:6:"layout";s:7:"default";s:10:"components";a:0:{}}s:4:"code";s:171:"use dieter\testimonals\models\Testimonial;
+
+function onStart()
+{
+	$slug = $this->param('slug');
+	$this['testimonial'] = Testimonial::where('slug', $slug)->first();
+}";s:6:"markup";s:692:"<div class="container">
+	<div class="row g80 detail testimonial-detail">
+		<div class="one-half">
+			<h3>{{ testimonial.name }}</h3>
+			<p>
+				{{ testimonial.full_description }}
+			</p>
+		</div>
+		<div class="one-half">
+			<div class="image-bg" style="background-image: url('{{  testimonial.person_image_url|media }}');">
+				<img src="{{ testimonial.person_image_url|media }}" title="{{ testimonial.person_image_url.title }}" alt="{{ testimonial.person_image_url.description }}"/>
+			</div>
+		</div>
+	</div>
+	<div class="isotope">
+		{% for image in testimonial.project_image_url %}
+			<img src="{{ image.thumb(300,300,{'mode':'crop'}) }}" />
+		{% endfor %}
+	</div>
+</div>";}";
