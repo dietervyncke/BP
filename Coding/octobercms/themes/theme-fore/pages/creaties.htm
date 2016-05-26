@@ -6,7 +6,7 @@ use dieter\creatiecategorie\models\CreatieCategorie;
 
 function onStart()
 {
-	$this['creaties'] = CreatieCategorie::orderBy('title', 'desc')->get();
+	$this['creaties'] = CreatieCategorie::all();
 }
 ==
 

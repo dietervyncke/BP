@@ -9,3 +9,6 @@
 1.0.4:
     - 'Updated table dieter_creatiecategorie_realisatie'
     - builder_table_update_dieter_creatiecategorie_realisatie.php
+1.0.5:
+    - 'Updated table dieter_creatiecategorie_creatiecategorie'
+    - builder_table_update_dieter_creatiecategorie_creatiecategorie.php

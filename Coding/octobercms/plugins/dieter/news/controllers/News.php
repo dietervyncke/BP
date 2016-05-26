@@ -5,8 +5,8 @@ use BackendMenu;
 
 class News extends Controller
 {
-    public $implement = ['Backend\Behaviors\ListController','Backend\Behaviors\FormController'];
-    
+    public $implement = ['Backend\Behaviors\ListController','Backend\Behaviors\FormController', 'Owl.Behaviors.ListDelete.Behavior',];
+
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
 
